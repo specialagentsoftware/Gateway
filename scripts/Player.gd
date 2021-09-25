@@ -53,7 +53,7 @@ func manage_animations():
 	elif facingDir.y == 1:
 		play_animation("IdleDown")
 		
-func _process(delta):
+func _process(_delta):
 	if check_interact():
 		if Input.is_action_just_pressed("interact"):
 			try_interact()

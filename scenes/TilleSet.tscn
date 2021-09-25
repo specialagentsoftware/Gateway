@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://tiles/floor4.png" type="Texture" id=1]
 [ext_resource path="res://tiles/floor2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://tiles/wall6.png" type="Texture" id=10]
 [ext_resource path="res://tiles/trashcan.png" type="Texture" id=11]
 [ext_resource path="res://tiles/vertwall.png" type="Texture" id=12]
+[ext_resource path="res://tiles/vertwallSlim.png" type="Texture" id=13]
 
 [node name="TilleSet" type="Node2D"]
 position = Vector2( 6.61458, -0.31498 )
@@ -64,3 +65,7 @@ texture = ExtResource( 11 )
 [node name="vertwall" type="Sprite" parent="."]
 position = Vector2( 366.219, 23.8467 )
 texture = ExtResource( 12 )
+
+[node name="vertwallSlim" type="Sprite" parent="."]
+position = Vector2( 366.223, 72.6949 )
+texture = ExtResource( 13 )

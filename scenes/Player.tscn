@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://sprites/0.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://sprites/9.png" type="Texture" id=3]
 [ext_resource path="res://sprites/24.png" type="Texture" id=4]
 [ext_resource path="res://sprites/19.png" type="Texture" id=5]
@@ -40,11 +40,6 @@ animations = [ {
 "name": "IdleRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "IdleDown",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "IdleLeft",
@@ -55,30 +50,35 @@ animations = [ {
 "name": "IdleUp",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 27 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "MoveRight",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 3 ), ExtResource( 13 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "MoveUp",
-"speed": 15.0
+"name": "IdleDown",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 31 ), ExtResource( 28 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "MoveDown",
 "speed": 15.0
 }, {
+"frames": [ ExtResource( 4 ), ExtResource( 27 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "MoveRight",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 9 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "MoveLeft",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 3 ), ExtResource( 13 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "MoveUp",
+"speed": 15.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 11.5689
-height = 6.92441
+radius = 10.7585
+height = 16.5111
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -94,7 +94,7 @@ frames = SubResource( 1 )
 animation = "IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8 )
+position = Vector2( -0.0210116, -0.340037 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

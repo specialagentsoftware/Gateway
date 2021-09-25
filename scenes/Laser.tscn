@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/rightlaster.png" type="Texture" id=1]
+[ext_resource path="res://sprites/laser1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/leftlaser.png" type="Texture" id=3]
+[ext_resource path="res://sprites/laser2.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Laser.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.0497, 3.98547 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Laser" type="StaticBody2D"]
+rotation = 1.5708
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.59569, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -2.84122, 0 )
+scale = Vector2( 2.36142, 1 )
+frames = SubResource( 2 )
+frame = 1
+playing = true
+
+[node name="leftlaser" type="Sprite" parent="AnimatedSprite"]
+position = Vector2( -16.9773, -0.236818 )
+texture = ExtResource( 3 )
+
+[node name="rightlaster" type="Sprite" parent="AnimatedSprite"]
+position = Vector2( 17, -1 )
+texture = ExtResource( 1 )

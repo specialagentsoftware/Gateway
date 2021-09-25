@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 func _ready():
 	var new_dialog = Dialogic.start('intro',true)
 	Dialogic.set_variable('password','no')
